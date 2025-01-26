@@ -10,11 +10,11 @@ Route::get('/', function () {
 
 
 //or you can only open view like this
-// Route::view('/home', 'home');
+// Route::view('/', 'home');
 
 
 //redirection of an url
-route::redirect('/home', '/');
+// route::redirect('/home', '/');
 
 //dynamic routing
 Route::get('/about/{name}', function($name){
@@ -22,7 +22,5 @@ Route::get('/about/{name}', function($name){
 });
 
 //calling controllers with routes
-Route::get('/user', [UserController::class, 'getUser']);
-Route::get('/about', [UserController::class, 'aboutUser']);
-Route::get('/user/{name}', [UserController::class, 'username']);
-Route::get('/admin', [UserController::class, 'admin']);
+Route::get('/about/{name}', [UserController::class, 'aboutUser']);
+Route::get('/home', [UserController::class, 'home']);
