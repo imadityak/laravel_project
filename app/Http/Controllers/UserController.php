@@ -8,7 +8,20 @@ use Illuminate\Support\Facades\View;
 class UserController extends Controller
 {
     function addUser(Request $req){
-        return $req;
+        $req->validate([
+            'username'=>'required | min:3 | max:15',
+            'email'=>'required | email',
+            'age'=>'required',
+            'skills'=>'required',
+            'gender'=>'required',
+            'city'=>'required'
+        ]);
+        echo "Username is $req->username <br>";
+        echo "City is $req->city<br>";
+        echo "Email is $req->email<br>";
+        print_r($req->skill);
+        echo "<br> Age is $req->age<br>";
+        echo "Gender is $req->gender<br>";
     }
     // function getUser(){
     //     return "Aditya Kumar";
