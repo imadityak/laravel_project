@@ -14,12 +14,14 @@ Route::get('/', function () {
 
 
 //redirection of an url
-// route::redirect('/home', '/');
+route::redirect('/', '/home');
 
 //dynamic routing
 Route::get('/about/{name}', function($name){
     return view('about', ['name'=>$name]);
 });
+
+Route::view('/inner','common.inner');
 
 //calling controllers with routes
 Route::get('/about/{name}', [UserController::class, 'aboutUser']);

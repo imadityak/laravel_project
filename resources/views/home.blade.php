@@ -1,4 +1,4 @@
-@include('common.header')
+@includeIf('common.header')
 <h1>Home Page</h1>
 {{-- Question -> Can this file work if we remove blade and the ans is yes. --}}
 
@@ -7,6 +7,7 @@
 <h1>Admin Login</h1>
 
 <h1>{{rand()}}</h1>
+@includeIf('common.inner',['page'=>"This is the home page"])
 {{-- <h1>{{$array[2]}}</h1> --}}
 
 {{-- conditional statement --}}
