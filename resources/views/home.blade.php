@@ -6,8 +6,8 @@
 @includeIf('common.inner',['page'=>"This is the home page"])
 {{-- <h1>{{$array[2]}}</h1> --}}
 
-<x-message-banner msg="User Login Success"/>
-<x-message-banner msg="User SignUp Success"/>
+<x-message-banner msg="User Login Success" class="success"/>
+<x-message-banner msg="User SignUp Success" class="success"/>
 <style>
         .success{
             background: lightgreen;
